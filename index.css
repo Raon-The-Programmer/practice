@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    
+
+}
+:root{
+    
+    --bg-color : #222327;
+    --text-color:#fff;
+    --main-color:#feb970;
+
+}
+body{
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    background-image: url('Bgimg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--text-color);
+}
+header{
+   position: fixed;
+   display: flex;
+   width: 100%;
+   align-items: center;
+   justify-content: space-between; 
+   padding: 28px 12%;
+   top: 0;
+   right: 0;
+   z-index: 1000;
+   transition: all .5s ease;
+   background: transparent;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 1.7rem;
+}
+.navbar{
+    display: flex;
+}
+.navbar a{
+    padding: 10px 0;
+    margin: 0 30px;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.1s ease;
+}
+.navbar a:hover{
+    color: var(--main-color);
+}
+.navbar a.active{
+    color: var(--main-color);
+}
+.main{
+    display: flex;
+    align-items: center;
+}
+.main a{
+    margin-right: 25px;
+    margin-left: 10px;
+    color: var(--text-color);
+}
+.user{
+    display: flex;
+    align-items: center;
+}
+.user i{
+    color: var(--main-color);
+    font-size: 28px;
+    margin-right: 7px;
+}
+.main a:hover{
+    color: var(--main-color);
+}
+#menu-icon{
+    font-size: 35px;
+    color: var(--text-color);
+    cursor: pointer;
+    z-index: 10001;
+    display:none;
+}
+@media (max-width: 1280px){
+    header{
+        padding: 14px 2%;
+        transition: .2s;
+    }
+    .navbar a{
+        padding: 5px 0;
+        margin: 0 20px;
+    }
+}
+@media(max-width:1090px){
+    #menu-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 250px;
+        height: 30vh;
+        background:#fc860876;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 10px;
+        transition: all 0.5s ease;
+        
+    }
+    .navbar a{
+        
+        display: block;
+        padding-top: 2px;
+        padding-left: 10px;
+    
+        margin: 2px 0;
+        transition: all 0.5s ease;
+
+    }
+    
+    .navbar a:hover{
+        color: var(--bg-color);
+        transform: translateY(5px);
+    }
+    .navbar a.active{
+        color: var(--bg-color);
+    }
+    .navbar.open{
+        right: 2%;
+    }
+}
+.words h1{
+    border: red solid;
+    width:fit-content;
+    justify-content: center;
+    align-content:center;
+    
+}
